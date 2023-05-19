@@ -63,7 +63,7 @@ function game() {
 
 // Call the functions.
 getComputerChoice();
-getPlayerChoice("sCisSoRs");
+getPlayerChoice("sCisSoRs"); // Player input.
 game();
 
 // Debug.
