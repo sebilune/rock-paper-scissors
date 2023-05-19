@@ -46,11 +46,7 @@ function game() {
     let tie = `It's a tie! ${computerChoice} against ${playerChoice}!`;
 
     // If the player wins, console log the win str.
-    if (playerChoice === scis && computerChoice === paper) {
-        console.log(win);
-    } else if (playerChoice === rock && computerChoice === paper) {
-        console.log(win);
-    } else if (playerChoice === paper && computerChoice === rock) {
+    if (playerChoice === scis && computerChoice === paper || playerChoice === rock && computerChoice === paper || playerChoice === paper && computerChoice === rock) {
         console.log(win);
     } else if (playerChoice === computerChoice) {
         // If it is a tie, console log the tie str.
