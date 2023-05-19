@@ -45,7 +45,7 @@ function game() {
   // If the player wins, console log the win str.
   if (
     (playerChoice === scis && computerChoice === paper) ||
-    (playerChoice === rock && computerChoice === paper) ||
+    (playerChoice === rock && computerChoice === scis) ||
     (playerChoice === paper && computerChoice === rock)
   ) {
     console.log(win);
