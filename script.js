@@ -1,3 +1,8 @@
+/* 
+█▀▄ ▄▀▄ ▄▀▀ █▄▀    █▀▄ ▄▀▄ █▀▄ ██▀ █▀▄    ▄▀▀ ▄▀▀ █ ▄▀▀ ▄▀▀ ▄▀▄ █▀▄ ▄▀▀ 
+█▀▄ ▀▄▀ ▀▄▄ █ █    █▀  █▀█ █▀  █▄▄ █▀▄    ▄█▀ ▀▄▄ █ ▄█▀ ▄█▀ ▀▄▀ █▀▄ ▄█▀ 
+*/
+
 // Define the choices of the game.
 let rock = "Rock";
 let paper = "Paper";
@@ -64,6 +69,6 @@ getPlayerChoice("sCisSoRs"); // Player input.
 game();
 
 // Debug.
-console.log(
-  `\nDebugger...\nComputer Picked: ${computerChoice}\nPlayer Picked: ${playerChoice}`
-);
+// console.log(
+//   `\nDebugger...\nComputer Picked: ${computerChoice}\nPlayer Picked: ${playerChoice}`
+// );
