@@ -1,33 +1,26 @@
+@use "../global/variables" as *;
+@use "../utils/cards" as *;
+
 .controls {
     display: flex;
-    min-height: 100vh;
+    min-height: 100%;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 3rem;
 
-    .card {
+    .cards {
         display: flex;
-        flex-direction: column;
-        width: 20rem;
-        margin-left: 3rem;
-        border: 0.3rem solid black;
+        gap: 3rem;
 
-        .thumb {
-            height: 20rem;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                height: 12rem;
-                width: auto;
+        .card {
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+    
+            &:hover {
+                transform: scale(1.05);
+                transition: transform 0.2s ease;
             }
-        }
-
-        .content {
-            text-align: center;
-            background-color: black;
-            color: white;
         }
     }
 }
