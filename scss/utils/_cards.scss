@@ -1,0 +1,26 @@
+@use "../global/variables" as *;
+
+.card {
+    width: 20rem;
+    border: 0.3rem solid black;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    
+    .thumb {
+        height: 20rem;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+            height: 12rem;
+            width: auto;
+        }
+    }
+    
+    .content {
+        text-align: center;
+        background-color: $yellow;
+    }
+}
