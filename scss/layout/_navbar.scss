@@ -1,0 +1,21 @@
+.navbar {
+  background-color: rgb(12, 12, 12);
+  color: white;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  width: 100%;
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &__logo {
+    margin-right: 2rem;
+    height: auto;
+    width: 6rem;
+    filter: invert(1);
+  }
+}
