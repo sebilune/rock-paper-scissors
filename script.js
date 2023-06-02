@@ -30,26 +30,25 @@ function getPlayerChoice(choice = "") {
   playerChoice = choices[processedWord] || null;
 }
 
-
-const outcomes = {
-  rock: {
-    rock: "It's a tie! rock against rock!",
-    paper: "You lose... paper beats rock.",
-    scissors: "You win! rock beats scissors!",
-  },
-  paper: {
-    rock: "You win! paper beats rock!",
-    paper: "It's a tie! paper against paper!",
-    scissors: "You lose... scissors beats paper.",
-  },
-  scissors: {
-    rock: "You lose... rock beats scissors.",
-    paper: "You win! scissors beats paper!",
-    scissors: "It's a tie! scissors against scissors!",
-  },
-};
-
 function game(player, computer) {
+  const outcomes = {
+    rock: {
+      rock: "It's a tie! rock against rock!",
+      paper: "You lose... paper beats rock.",
+      scissors: "You win! rock beats scissors!",
+    },
+    paper: {
+      rock: "You win! paper beats rock!",
+      paper: "It's a tie! paper against paper!",
+      scissors: "You lose... scissors beats paper.",
+    },
+    scissors: {
+      rock: "You lose... rock beats scissors.",
+      paper: "You win! scissors beats paper!",
+      scissors: "It's a tie! scissors against scissors!",
+    },
+  };
+
   const outcome = outcomes[player][computer];
   console.log(outcome);
 }
