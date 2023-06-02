@@ -1,0 +1,33 @@
+.controls {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        margin-left: 3rem;
+        border: 0.3rem solid black;
+
+        .thumb {
+            height: 20rem;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 12rem;
+                width: auto;
+            }
+        }
+
+        .content {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+    }
+}
