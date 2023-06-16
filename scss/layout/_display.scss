@@ -1,0 +1,33 @@
+.display {
+    .results {
+        display: flex;
+        justify-content: center;
+
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .score {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0 auto;
+        width: fit-content;
+        text-align: center;
+
+        border: 0.3rem solid black;
+        border-radius: 0.75rem;
+
+        h1 {
+            font-size: 6rem;
+            min-width: 30rem;
+            width: fit-content;
+        }
+    
+        h2 {
+            width: 18rem;
+        }
+    }
+
+}
