@@ -7,6 +7,15 @@ Welcome to my Rock Paper Scissors Game repository! This repository contains the 
 - [Getting Started](#getting-started)
 - [License](#license)
 
+## Technologies Used
+
+The RPS website was built using the following technologies:
+
+- HTML5
+- SASS
+- Vanilla JavaScript
+- CSS3
+
 ## Project Overview
 
 The Rock Paper Scissors Game is an interactive website that allows users to play the classic game of Rock Paper Scissors against the computer. The objective of the game is to be the first player to reach a score of 5 wins. This project serves as a demonstration of my skills in writing JavaScript game logic, manipulating the DOM, and providing an engaging user experience.
