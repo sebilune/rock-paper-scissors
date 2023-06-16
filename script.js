@@ -1,11 +1,13 @@
-/* 
-█▀▄ ▄▀▄ ▄▀▀ █▄▀    █▀▄ ▄▀▄ █▀▄ ██▀ █▀▄    ▄▀▀ ▄▀▀ █ ▄▀▀ ▄▀▀ ▄▀▄ █▀▄ ▄▀▀ 
-█▀▄ ▀▄▀ ▀▄▄ █ █    █▀  █▀█ █▀  █▄▄ █▀▄    ▄█▀ ▀▄▄ █ ▄█▀ ▄█▀ ▀▄▀ █▀▄ ▄█▀ 
-*/
 
-// Define the variables that will hold the choices.
+const rockCard = document.querySelector(".rock");
+const paperCard = document.querySelector(".paper");
+const scissorsCard = document.querySelector(".scissors");
+
+const playerSpan = document.querySelector(".player-score");
+const computerSpan = document.querySelector(".computer-score");
+const results = document.querySelector(".results-text");
+
 let computerChoice;
-let playerChoice;
 
 function getComputerChoice() {
   const choices = {
@@ -18,42 +20,69 @@ function getComputerChoice() {
   computerChoice = choices[rand];
 }
 
-// Get the input from the player, takes onse string as a param.
-function getPlayerChoice(choice = "") {
-  const choices = {
-    rock: "rock",
-    paper: "paper",
-    scissors: "scissors"
-  };
+rockCard.addEventListener("click", () => game("rock"));
+paperCard.addEventListener("click", () => game("paper"));
+scissorsCard.addEventListener("click", () => game("scissors"));
 
-  let processedWord = choice.toLowerCase();
-  playerChoice = choices[processedWord] || null;
+function checkScores() {
+  if (playerSpan.textContent === "5") {
+    results.textContent = "YOU WON AGAINST COMPUTER! 🎉";
+    playerSpan.textContent = "0";
+    computerSpan.textContent = "0";
+  } else if (computerSpan.textContent === "5") {
+    results.textContent = "YOU LOST AGAINST COMPUTER. 😔";
+    playerSpan.textContent = "0";
+    computerSpan.textContent = "0";
+  }
 }
 
-function game(player, computer) {
+function game(choice) {
+  getComputerChoice();
+
+  let playerNum = parseInt(playerSpan.textContent);
+  let computerNum = parseInt(computerSpan.textContent);
+
   const outcomes = {
     rock: {
-      rock: "It's a tie! rock against rock!",
-      paper: "You lose... paper beats rock.",
-      scissors: "You win! rock beats scissors!",
+      rock: "It's a tie! rock against rock! 😨",
+      paper: "You lose. paper beats rock. ❌",
+      scissors: "You win! rock beats scissors! ✅",
     },
     paper: {
-      rock: "You win! paper beats rock!",
-      paper: "It's a tie! paper against paper!",
-      scissors: "You lose... scissors beats paper.",
+      rock: "You win! paper beats rock! ✅",
+      paper: "It's a tie! paper against paper! 😨",
+      scissors: "You lose. scissors beats paper. ❌",
     },
     scissors: {
-      rock: "You lose... rock beats scissors.",
-      paper: "You win! scissors beats paper!",
-      scissors: "It's a tie! scissors against scissors!",
+      rock: "You lose. rock beats scissors. ❌",
+      paper: "You win! scissors beats paper! ✅",
+      scissors: "It's a tie! scissors against scissors! 😨",
     },
   };
 
-  const outcome = outcomes[player][computer];
-  console.log(outcome);
-}
+  const outcome = outcomes[choice][computerChoice];
+  
+  if (choice === computerChoice) {
+    results.textContent = outcome;
+    console.log("tie");
+    return;
+  }
 
-// Call the functions.
-getComputerChoice();
-getPlayerChoice("sCisSoRs"); // Player input.
-game(playerChoice, computerChoice);
+  const winConditions = {
+    rock: "scissors",
+    paper: "rock",
+    scissors: "paper"
+  };
+
+  if (winConditions[choice] === computerChoice) {
+    playerSpan.textContent = playerNum + 1;
+    results.textContent = outcome;
+    console.log("win");
+  } else {
+    computerSpan.textContent = computerNum + 1;
+    results.textContent = outcome;
+    console.log("lose");
+  }
+
+  checkScores();
+}
