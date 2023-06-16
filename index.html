@@ -8,54 +8,56 @@
     <title>RPS</title>
 </head>
 <body>
-    <section class="navbar">
-        <img src="./img/logo.png" alt="logo" class="navbar__logo">
-        <h1 class="navbar__text">Rock, Paper, Scissors!</h1>
-    </section>
-
-    <section class="game">
-
-        <div class="display">
-            <div class="results">
-                <h2 class="results-text">FIRST TO 5 WINS!</h2>
-            </div>
-            <div class="score">
-                <h2>PLAYER</h2>
-                <h1 class="score-count"><span class="player-score">0</span> - <span class="computer-score">0</span></h1>
-                <h2>COMPUTER</h2>
-            </div>
-        </div>
+    <div class="container">
+        <section class="navbar">
+            <img src="./img/logo.png" alt="logo" class="navbar__logo">
+            <h1 class="navbar__text">Rock, Paper, Scissors!</h1>
+        </section>
     
-        <div class="controls">
-            <h2>Pick your weapon!</h2>
-            <div class="cards">
-                <div class="card rock">
-                    <div class="thumb">
-                        <img src="./img/rock.png" alt="">
-                    </div>
-                    <div class="content">
-                        Rock crushes scissors.
-                    </div>
+        <section class="game">
+    
+            <div class="display">
+                <div class="results">
+                    <h2 class="results-text">FIRST TO 5 WINS!</h2>
                 </div>
-                <div class="card paper">
-                    <div class="thumb">
-                        <img src="./img/paper.png" alt="">
-                    </div>
-                    <div class="content">
-                        Paper covers rock.
-                    </div>
+                <div class="score">
+                    <h2>PLAYER</h2>
+                    <h1 class="score-count"><span class="player-score">0</span> - <span class="computer-score">0</span></h1>
+                    <h2>COMPUTER</h2>
                 </div>
-                <div class="card scissors">
-                    <div class="thumb">
-                        <img src="./img/scissors.png" alt="">
+            </div>
+        
+            <div class="controls">
+                <h2>Pick your weapon!</h2>
+                <div class="cards">
+                    <div class="card rock">
+                        <div class="thumb">
+                            <img src="./img/rock.png" alt="">
+                        </div>
+                        <div class="content">
+                            Rock crushes scissors.
+                        </div>
                     </div>
-                    <div class="content">
-                        Scissors cuts paper.
+                    <div class="card paper">
+                        <div class="thumb">
+                            <img src="./img/paper.png" alt="">
+                        </div>
+                        <div class="content">
+                            Paper covers rock.
+                        </div>
+                    </div>
+                    <div class="card scissors">
+                        <div class="thumb">
+                            <img src="./img/scissors.png" alt="">
+                        </div>
+                        <div class="content">
+                            Scissors cuts paper.
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <script src="./script.js"></script>
 </body>
