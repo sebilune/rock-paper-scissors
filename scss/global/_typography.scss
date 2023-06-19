@@ -12,24 +12,24 @@ a:active {
 
 @media (max-width: 1200px) {
   :root {
-    font-size: 40%;
+    font-size: 55%;
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    font-size: 30%;
+      font-size: 45%;
   }
 }
 
 @media (max-width: 480px) {
-  html {
-    font-size: 20%;
+  :root {
+      font-size: 40%;
   }
 }
 
 @media (max-width: 320px) {
   :root {
-    font-size: 10%;
+      font-size: 30%;
   }
 }
