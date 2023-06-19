@@ -10,6 +10,8 @@
 
     .cards {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 3rem;
 
         .card {
