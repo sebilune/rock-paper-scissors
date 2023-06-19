@@ -9,3 +9,27 @@ a:visited,
 a:active {
   text-decoration: none;
 }
+
+@media (max-width: 1200px) {
+  :root {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+      font-size: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+      font-size: 40%;
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+      font-size: 30%;
+  }
+}
